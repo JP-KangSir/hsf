@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.generator.dao.HsfFaceDataDao">
+  <!--
+    《扩展Dao操作，由Mybatis Generator插件自动生成，多次生成，不会覆盖》
+    这是一个继承自父xxxMapper.xml的配置文件，扩展的sql语句操作都放在这个文件
+    注意：不要使用与父mapper相同的statement（select、insert、update、delete），会被覆盖，而sql、resultMap不会覆盖
+    generator date：2020-08-31.
+  -->
+  <resultMap id="BaseResultMap" type="com.example.generator.bean.HsfFaceData">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="face_id" jdbcType="VARCHAR" property="faceId" />
+    <result column="gender" jdbcType="INTEGER" property="gender" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="arrive_time" jdbcType="TIMESTAMP" property="arriveTime" />
+    <result column="arrive_count" jdbcType="INTEGER" property="arriveCount" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="test" jdbcType="VARCHAR" property="test" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, face_id, gender, age, arrive_time, arrive_count, create_time, update_time, test
+  </sql>
+  <!-- 自定义 -->
+
+</mapper>
