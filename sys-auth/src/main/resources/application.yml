@@ -1,0 +1,56 @@
+
+
+server:
+  port: 8504
+
+spring:
+  application:
+    name: service-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/shumei?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.example.hsfapi.entity
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: not_empty
+      column-underline: true
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+      db-type: mysql
+    refresh: false
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug
+
+
+oss:
+  endpoint : http://oss-cn-hangzhou.aliyuncs.com
+  accessKeyId : LTAI4GKvp6N8jnSbRB5V8pXs
+  accessKeySecret : LK9fLWEoyiTHyHDIXet1ouulmwDCan
+  bucketName : bucket-fir
+
+swagger2:
+  enable: true

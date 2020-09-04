@@ -59,7 +59,6 @@ public class MySQLCommentGenerator extends EmptyCommentGenerator {
 
 
 
-
     @Override
     public void addFieldComment(Field field, IntrospectedTable introspectedTable, IntrospectedColumn introspectedColumn) {
         // 获取列注释
@@ -69,5 +68,8 @@ public class MySQLCommentGenerator extends EmptyCommentGenerator {
         field.addJavaDocLine(" * " + remarks);
         //field.addJavaDocLine(" * " + columnName);
         field.addJavaDocLine(" */");
+
+        //给model的字段添加swagger注解
+        field.addJavaDocLine("@ApiModelProperty(value = \""+remarks+"\")");
     }
 }

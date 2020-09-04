@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.sysauth.dao.UcDictionaryDao">
+  <!--
+    《扩展Dao操作，由Mybatis Generator插件自动生成，多次生成，不会覆盖》
+    这是一个继承自父xxxMapper.xml的配置文件，扩展的sql语句操作都放在这个文件
+    注意：不要使用与父mapper相同的statement（select、insert、update、delete），会被覆盖，而sql、resultMap不会覆盖
+    generator date：2020-09-01.
+  -->
+  <resultMap id="BaseResultMap" type="com.example.sysauth.bean.UcDictionary">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="type_code" jdbcType="VARCHAR" property="typeCode" />
+    <result column="type_name" jdbcType="VARCHAR" property="typeName" />
+    <result column="dic_name" jdbcType="VARCHAR" property="dicName" />
+    <result column="dic_value" jdbcType="VARCHAR" property="dicValue" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="is_deleted" jdbcType="TINYINT" property="isDeleted" />
+    <result column="is_enable" jdbcType="TINYINT" property="isEnable" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+    <result column="created_by" jdbcType="VARCHAR" property="createdBy" />
+    <result column="modified_by" jdbcType="VARCHAR" property="modifiedBy" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, type_code, type_name, dic_name, dic_value, description, is_deleted, is_enable, gmt_create, gmt_modified, created_by, modified_by
+  </sql>
+  <!-- 自定义 -->
+
+</mapper>

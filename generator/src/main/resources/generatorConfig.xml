@@ -63,6 +63,23 @@
             <property name="targetPackage" value="com.example.generator.dao"/>
             <property name="author" value="kjp"/>
         </plugin>
+        <!--自定义service-->
+        <plugin type="com.example.generatortool.plugin.AddExtendServicePlugin">
+            <property name="baseDir" value="${plugin.base.dir}"/>
+            <property name="targetProject" value="src/main/java"/>
+            <property name="targetPackage" value="com.example.generator.service"/>
+            <property name="author" value="kjp"/>
+        </plugin>
+        <!--自定义serviceImpl-->
+        <plugin type="com.example.generatortool.plugin.AddExtendServiceImplPlugin">
+            <property name="baseDir" value="${plugin.base.dir}"/>
+            <property name="targetProject" value="src/main/java"/>
+            <property name="targetPackage" value="com.example.generator.service.impl"/>
+            <!--import导包路径-->
+            <property name="daoPackage" value="com.example.generator.dao."/>
+            <property name="servicePackage" value="com.example.generator.service."/>
+            <property name="author" value="kjp"/>
+        </plugin>
         <!--<plugin type="org.mybatis.generator.plugins.MapperPlugin">
             <property name="targetProject" value="../generator/src/main/java"/>
             <property name="targetPackage" value="com.fendo.mapper"/>

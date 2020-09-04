@@ -19,6 +19,8 @@ import java.util.List;
  * @date 2019/10/24 15:04
  */
 public class UseLombokPlugin extends PluginAdapter {
+    private static final String API_MODEL_PROPERTY_FULL_CLASS_NAME="io.swagger.annotations.ApiModelProperty";
+
 
     @Override
     public boolean validate(List<String> warnings) {
@@ -33,6 +35,7 @@ public class UseLombokPlugin extends PluginAdapter {
         topLevelClass.addImportedType("lombok.Data");
         topLevelClass.addImportedType("lombok.NoArgsConstructor");
         topLevelClass.addImportedType("lombok.AllArgsConstructor");
+        topLevelClass.addImportedType(API_MODEL_PROPERTY_FULL_CLASS_NAME);
         topLevelClass.addAnnotation("@Data");
         topLevelClass.addAnnotation("@Builder");
         topLevelClass.addAnnotation("@NoArgsConstructor");

@@ -114,7 +114,7 @@ public class AddExtendDaoPlugin extends PluginAdapter {
         // this.context.getProperty("javaFileEncoding")
         GeneratedJavaFile gf = new GeneratedJavaFile(unit, targetProject, "utf-8", this.context.getJavaFormatter());
 
-
+        contextGenerateAdditionalXmlFiles(introspectedTable);
         return Arrays.asList(gf);
     }
 
